@@ -8,12 +8,12 @@ Here, I describe how to fill in each parameter in the FME Workbench **Reader/Wri
 
 ### 1.1 Source GeoTIFF*
 
-**What to enter:** The full file path to your input satellite image (e.g., `C:\Data\satellite_scene.tif`).
+**What to enter:** The full file path to input satellite image (e.g., `C:\Data\satellite_scene.tif`).
 
 **Assumptions and notes:**
 
 - The file must be a georeferenced GeoTIFF with an embedded CRS. The Raster Prep block's "Convert to Web Mercator" reprojector depends on this.
-- If the imagery is delivered as multiple files (e.g., one per spectral band), it would be ideal for me to composite or mosaic them beforehand, or point to the already-composited file.
+- If the imagery is delivered as multiple files (e.g., one per spectral band), it would be ideal to composite or mosaic them beforehand, or point to the already-composited file.
 
 ---
 
@@ -42,7 +42,7 @@ Here, I describe how to fill in each parameter in the FME Workbench **Reader/Wri
 
 ### 1.4 Team AOI Name (if Name Filter)
 
-**What to enter:** The name string of your AOI as stored in the database (e.g., `"ProjectAlpha"`).
+**What to enter:** The name string of AOI as stored in the database (e.g., `"ProjectABC"`).
 
 **When to fill in:** Only when the filter type in Section 1.3 is set to `Name`. Leave blank if using OID.
 
@@ -149,7 +149,7 @@ Here, I describe how to fill in each parameter in the FME Workbench **Reader/Wri
 
 **Per-band vs. all-bands:**
 
-- The label says "Red (or all)," suggesting I can either apply one gamma value uniformly to all bands or tune each band independently (if additional per-band fields are available).
+- The label says "Red (or all)," suggesting either applying one gamma value uniformly to all bands or tune each band independently (if additional per-band fields are available).
 - Applying the same value to all bands preserves color balance.
 - Adjusting per-band allows compensation for atmospheric effects (e.g., boosting the blue band to reduce haze).
 
