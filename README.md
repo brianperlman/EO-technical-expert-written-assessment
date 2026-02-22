@@ -3,8 +3,9 @@
   <img width="500" height="216" alt="image" src="https://github.com/user-attachments/assets/02079f7d-6bbf-42ec-af79-49539a44fc5e" />
 </div>
 
-# Brian Perlman — MSF EO Technical Expert — Written Assessment
+# MSF EO Technical Expert — Written Assessment
 
+**Applicant:** Brian Perlman
 **Date:** February 22, 2026
 
 ---
