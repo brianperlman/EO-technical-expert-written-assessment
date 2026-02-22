@@ -1,5 +1,7 @@
-<img width="500" height="216" alt="image" src="https://github.com/user-attachments/assets/02079f7d-6bbf-42ec-af79-49539a44fc5e" />
 
+<div align="center">
+  <img width="500" height="216" alt="image" src="https://github.com/user-attachments/assets/02079f7d-6bbf-42ec-af79-49539a44fc5e" />
+</div>
 
 # Brian Perlman — MSF EO Technical Expert — Written Assessment
 
