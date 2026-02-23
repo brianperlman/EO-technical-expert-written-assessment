@@ -171,9 +171,8 @@ To re-run the notebook:
 1. Place `floodextentpak.geojson` in the same directory as the notebook
 2. Provide AWS credentials in `ext_recruitment_user_4_creds.txt`
 3. Authenticate to Earth Engine: `earthengine authenticate`
-4. Run all cells sequentially (Cells 0–35)
-
-The tile selection is deterministic given the same STAC catalog state. GEE results may vary slightly if Sentinel-1 reprocessing campaigns update the GRD archive.
+4. Run all cells sequentially
+5. Contact me at `brian.perlman@vienna.msf.org` if you run into any issues.
 
 ---
 
