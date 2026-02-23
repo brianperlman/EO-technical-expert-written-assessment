@@ -8,7 +8,7 @@
 
 MSF relies on EO data and geospatial analysis to support operational planning, population estimation, camp management, and disaster response. A critical component of this work is building extraction, which is the delineation of building footprints from satellite or aerial imagery using manual digitization, semi-automated, or fully automated (e.g., ML/DL) methods.
 
-This document defines a **standardized feature class schema** for building extraction results intended for **organization-wide adoption** across all MSF OCs. The goal is to ensure that every building footprint dataset produced or commissioned by MSF — regardless of the extraction method, imagery source, geographic context, or project — conforms to a single, interoperable schema. This enables:
+This document defines a **standardized feature class schema** for building extraction results intended for organization-wide adoption across all MSF OCs. The goal is to ensure that every building footprint dataset produced or commissioned by MSF — regardless of the extraction method, imagery source, geographic context, or project — conforms to a single, interoperable schema. This enables:
 
 - Consistent data sharing across missions, OCs, and partner organizations (e.g., Missing Maps, HOT, MapAction, UNOSAT).
 - Reliable downstream analysis such as population estimation, damage assessment, and change detection.
@@ -178,7 +178,7 @@ Example: `msf_bld_sdn_elphasher_20240315_v01.gpkg`
 
 ## 5. Integrating Historical Building Extraction Results
 
-A primary design consideration for this schema is its ability to **accommodate multi-temporal data** — that is, building extractions derived from imagery captured at different dates for the same geographic area. This is essential for MSF, where operational areas are surveyed repeatedly over months or years for population monitoring, camp growth tracking, and post-disaster damage assessment.
+A primary design consideration for this schema is its ability to accommodate multi-temporal data — that is, building extractions derived from imagery captured at different dates for the same geographic area. This is essential for MSF, where operational areas are surveyed repeatedly over months or years for population monitoring, camp growth tracking, and post-disaster damage assessment.
 
 ### 5.1 Temporal Versioning Model
 
