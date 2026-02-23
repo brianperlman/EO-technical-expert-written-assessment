@@ -10,7 +10,7 @@ MSF relies on EO data and geospatial analysis to support operational planning, p
 
 This document defines a **standardized feature class schema** for building extraction results intended for **organization-wide adoption** across all MSF OCs. The goal is to ensure that every building footprint dataset produced or commissioned by MSF — regardless of the extraction method, imagery source, geographic context, or project — conforms to a single, interoperable schema. This enables:
 
-- Consistent data sharing across missions, OCs, and partner organizations (e.g., HOT, MapAction, UNOSAT).
+- Consistent data sharing across missions, OCs, and partner organizations (e.g., Missing Maps, HOT, MapAction, UNOSAT).
 - Reliable downstream analysis such as population estimation, damage assessment, and change detection.
 - Long-term data stewardship and the ability to integrate historical datasets with new extractions.
 - Reproducibility and transparency in analytical workflows.
