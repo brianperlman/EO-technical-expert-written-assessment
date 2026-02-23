@@ -2,7 +2,6 @@
 
 **Author:** Brian Perlman | **Date:** September 2022 analysis, documented 22 February 2026
 **Notebook:** `Test_TL_Perlman_Pakistan_08August2022_FloodDetection.ipynb`
-**Transparency note:** Claude Opus 4.6 (Anthropic) assisted in developing this notebook. I am responsible for all content.
 
 ---
 
@@ -169,3 +168,7 @@ To re-run the notebook:
 4. Run all cells sequentially (Cells 0–35)
 
 The tile selection is deterministic given the same STAC catalog state. GEE results may vary slightly if Sentinel-1 reprocessing campaigns update the GRD archive.
+
+---
+
+**Transparency note:** Claude Opus 4.6 (Anthropic) assisted in developing this notebook. I am responsible for all content.
