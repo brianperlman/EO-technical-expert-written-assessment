@@ -1,4 +1,4 @@
-<img width="400" height="170" alt="image" src="https://github.com/user-attachments/assets/c493f6bd-8bf0-42ac-ab94-250d2bc1d60f" />
+<img width="1920" height="706" alt="image" src="https://github.com/user-attachments/assets/e3800d8a-33b2-4643-b8ac-3758102ce096" />
 
 
 # Building Extraction Feature Class Schema
