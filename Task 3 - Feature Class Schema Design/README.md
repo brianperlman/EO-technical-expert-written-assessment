@@ -2,7 +2,7 @@
 
 ## 1. Assignment Overview
 
-MSF relies on EO data and geospatial analysis to support operational planning, population estimation, camp management, and disaster response. A critical component of this work is **building extraction** — the delineation of building footprints from satellite or aerial imagery using manual digitization, semi-automated, or fully automated (e.g., deep learning) methods.
+MSF relies on EO data and geospatial analysis to support operational planning, population estimation, camp management, and disaster response. A critical component of this work is building extraction, which is the delineation of building footprints from satellite or aerial imagery using manual digitization, semi-automated, or fully automated (e.g., ML/DL) methods.
 
 This document defines a **standardized feature class schema** for building extraction results intended for **organization-wide adoption** across all MSF OCs. The goal is to ensure that every building footprint dataset produced or commissioned by MSF — regardless of the extraction method, imagery source, geographic context, or project — conforms to a single, interoperable schema. This enables:
 
