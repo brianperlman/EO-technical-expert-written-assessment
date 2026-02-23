@@ -7,7 +7,7 @@
 
 **Scenario:** A processing script raises a low-disk-space warning on the **E: eo_storage** drive (2 TB network drive, daily incremental backups).
 
-**Immediate response:** Stop or pause the running script before the drive fills completely and begins producing corrupt or incomplete outputs. Verify the current state of disk usage (`df -h` or Windows disk properties) to determine exactly how much space remains and which directories are consuming the most. Check whether the script is writing intermediate files (scratch rasters, temporary geodatabases) that are inflating usage beyond the expected final output size.
+**Immediate response:** Stop or pause the running script before the drive fills completely and begins producing corrupt or incomplete outputs. Verify the current state of disk usage to determine exactly how much space remains and which directories are consuming the most. Check whether the script is writing intermediate files (scratch rasters, temporary geodatabases) that are inflating usage beyond the expected final output size.
 
 **Short-term mitigations:** Clear the **Temporary Archive** folder on E: — by definition this content is transient and should be safe to purge. Move any completed "Draft" mosaic datasets and finalized ArcGIS Pro project packages that no longer need active editing to the **I: eo_image** drive (15 TB, with 90-day full backups) or directly to the appropriate Production (PROD) Amazon S3 bucket (e.g., **eo-archive** for original/processed raster zips, **eo-enterprise** for published Cloud Raster Formats (CRFs)). Redirect the script's scratch workspace and temporary raster outputs to a dedicated `temp` directory on I: where space is less constrained. Once enough headroom is recovered, resume the processing job.
 
