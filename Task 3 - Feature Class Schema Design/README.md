@@ -131,7 +131,7 @@ Use **UUID v4** for the `uid` field. Never reuse or recycle identifiers. UUIDs e
 
 ### 4.3 Minimum Mapping Unit (MMU)
 
-Define and document a minimum mapping unit per project. A recommended default is **5 m²** for urban settings and **9 m²** for rural/camp settings. Structures smaller than the MMU should be excluded or flagged.
+Define and document a minimum mapping unit per project. A recommended default is **5 m²** for urban settings and **7 m²** for rural/camp settings. Structures smaller than the MMU should be excluded or flagged.
 
 ### 4.4 Topology & Quality Assurance
 
