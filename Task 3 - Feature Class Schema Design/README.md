@@ -1,3 +1,6 @@
+<img width="400" height="170" alt="image" src="https://github.com/user-attachments/assets/c493f6bd-8bf0-42ac-ab94-250d2bc1d60f" />
+
+
 # Building Extraction Feature Class Schema
 
 ## 1. Assignment Overview
