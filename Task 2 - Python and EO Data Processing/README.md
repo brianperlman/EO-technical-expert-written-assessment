@@ -105,7 +105,7 @@ The SAR method classified **41.6%** of the scene as flooded — higher than the 
 Note that the MSF finalized flood extent map comports well with my findings, especially when taking into consideration the more sensitive S1 approach.
 
 <img width="1916" height="927" alt="image" src="https://github.com/user-attachments/assets/f5dd7f36-50bf-439a-8716-424df758ce0d" />
-
+Source: https://geo.geomsf.org/portal/apps/webappviewer/index.html?id=b22ae122fae442ec942c3c26285efcb0
 
 ### Quantitative Results
 
