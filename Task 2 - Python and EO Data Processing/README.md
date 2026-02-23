@@ -6,9 +6,9 @@
 
 ## 1. Background
 
-The [2022 Pakistan monsoon floods](https://www.britannica.com/event/Pakistan-floods-of-2022) submerged approximately one-third of the country, displacing over 33 million people and causing widespread destruction across Sindh and Punjab provinces along the Indus River floodplain. This notebook demonstrates a multi-method flood detection workflow using Maxar Open Data high-resolution satellite imagery, supplemented by Sentinel-1 SAR from Google Earth Engine.
+The [2022 Pakistan monsoon floods](https://www.britannica.com/event/Pakistan-floods-of-2022) submerged approximately one-third of the country, displacing millions of people and causing widespread destruction across Sindh and Punjab provinces along the Indus River floodplain. This notebook demonstrates a multi-method flood detection workflow using Maxar Open Data VHR optical satellite imagery (with both NDVI and unsupervised ML analysis methods) and compared with analysis of Sentinel-1 SAR data sourced from Google Earth Engine.
 
-**Study area:** Sindh province, approximately 12 km × 15 km centered on **(26.55°N, 67.69°E)**, northwest of Mohenjo-daro along the Indus River corridor.
+**Study area:** Sindh province, approximately 12 km × 15 km centered on **(26.55°N, 67.69°E)**, northwest of Mohenjo-daro along the Indus River corridor, just north of Manchar Lake, where massive flodding occurred.
 
 ---
 
@@ -27,11 +27,11 @@ Maxar data was accessed as Cloud Optimized GeoTIFFs (COGs) streamed from S3 via 
 
 ## 3. Tile Selection Methodology
 
-Tile selection was the most technically challenging part of the workflow. The Maxar Open Data catalog for the Pakistan flooding event contains 2,549 items, of which 1,766 have multispectral (`ms_analytic`) assets required for NDWI computation.
+The Maxar Open Data catalog for the Pakistan flooding event contains 2,549 items, of which 1,766 have multispectral (`ms_analytic`) assets required for NDWI computation.
 
-The selection pipeline addressed several challenges:
+The selection pipeline addresses several challenges:
 
-- **Targeting confirmed new flooding:** All 1,766 ms_analytic tiles were scored against the flood extent GeoJSON (7,397 polygons, EPSG:3857 → WGS84). Permanent water bodies (Manchar Lake) were excluded so only monsoon-induced inundation was targeted.
+- **Targeting confirmed new flooding:** All 1,766 ms_analytic tiles were scored against an MSF flood extent GeoJSON (7,397 polygons, EPSG:3857 → WGS84). Permanent water bodies (e.g., Manchar Lake) were excluded so only monsoon-induced inundation was targeted.
 - **Eliminating edge-of-swath strips:** Maxar ARD tiles sit on a fixed 5 km grid. Satellite swath edges produce narrow slivers with >70% nodata. Tiles with bounding box dimensions below 70% of the maximum were rejected.
 - **Ensuring spatial contiguity:** A greedy adjacency clustering algorithm selected the tightest cluster of 6 tiles to avoid black gaps in the mosaic.
 - **Resolving band count mismatches:** WV02/WV03 tiles (8-band) were kept separate from GE01 tiles (4-band) to prevent `rasterio.merge()` failures.
