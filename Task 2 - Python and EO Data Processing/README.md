@@ -74,7 +74,7 @@ The resulting classification map:
 
 ![Flood classification using NDWI](figures/flood-classification-ndwi.png)
 
-*Left:* Post-flood true color satellite mosaic. *Right:* NDWI flood classification — 23.1% of the scene classified as flooded (blue), concentrated along drainage channels, low-lying agricultural fields, and the river corridor in the southwest.
+*Left:* Post-flood true color satellite mosaic. *Right:* NDWI flood classification — 23.1% of the scene classified as flooded (blue).
 
 ### 5.2 Method 2 — Gaussian Mixture Model (GMM) Clustering
 
@@ -101,7 +101,7 @@ The SAR method classified **41.6%** of the scene as flooded — higher than the 
 
 ![Three-way flood detection comparison](figures/ndwi-GMMclustering-S1.png)
 
-*Left:* NDWI threshold (23.1% flooded). *Center:* GMM 8-band clustering (21.5% flooded). *Right:* Sentinel-1 SAR backscatter (41.6% flooded). All three methods identify the same major flood features — inundated agricultural fields in the north, the river corridor in the southwest, and drainage channel flooding — but differ in sensitivity at the margins.
+*Left:* NDWI threshold (23.1% flooded). *Center:* GMM 8-band clustering (21.5% flooded). *Right:* Sentinel-1 SAR backscatter (41.6% flooded). All three methods identify the same major flood features — inundated agricultural fields in the north, the inundanted land just north of Manchar Lake in the southwest, and drainage channel flooding — but differ in sensitivity at the margins.
 
 Note that the MSF finalized flood extent map comports well with my findings, especially when taking into consideration the more sensitive S1 approach.
 
