@@ -21,7 +21,9 @@ The [2022 Pakistan monsoon floods](https://www.britannica.com/event/Pakistan-flo
 | Sentinel-1 GRD (via GEE) | S1A C-band SAR | 10 m | VH polarization | 2022-08-30 | Independent SAR validation |
 | Flood Extent | — | — | Vector (GeoJSON) | 2022-08-29 | AOI selection and validation |
 
-Maxar data was accessed as Cloud Optimized GeoTIFFs (COGs) streamed from S3 via the Maxar Open Data STAC catalog. The 8-band WorldView-2 multispectral ordering is: Coastal (0), Blue (1), Green (2), Yellow (3), Red (4), Red Edge (5), NIR1 (6), NIR2 (7).
+Vantor/Maxar data (Maxar is now re-branded as Vantor, but since the imagery was captured in 2022, I reference the company as Maxar throughout the repo) was accessed as Cloud Optimized GeoTIFFs (COGs) streamed from S3 via the Maxar Open Data STAC catalog. The 8-band WorldView-2 multispectral ordering is: Coastal (0), Blue (1), Green (2), Yellow (3), Red (4), Red Edge (5), NIR1 (6), NIR2 (7).
+
+I selected the multispectral analytic (`ms_analytic`) product over the panchromatic analytic (`pan_analytic`) product because flood detection requires spectral discrimination across distinct wavelength bands — NDWI relies on the differential response between Green and NIR1, and GMM clustering leverages all 8 spectral bands simultaneously. The multispectral product is delivered at its native ~2 m ground sample distance (GSD), compared to ~0.46 m for the panchromatic product, but the panchromatic sensor captures only a single broadband grayscale channel and cannot support spectral index computation.
 
 ---
 
