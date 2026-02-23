@@ -20,7 +20,7 @@ The 2022 Pakistan monsoon floods submerged approximately one-third of the countr
 | Maxar Open Data (post-flood) | WorldView-2 | 2 m | 8-band multispectral | 2022-09-03 | Flood detection |
 | Maxar Open Data (pre-flood) | WorldView-3 | 2 m | 8-band multispectral | 2022-04-28 | Before/after comparison |
 | Sentinel-1 GRD (via GEE) | S1A C-band SAR | 10 m | VH polarization | 2022-08-30 | Independent SAR validation |
-| UNOSAT Flood Extent | — | — | Vector (GeoJSON) | 2022-08-29 | AOI selection and validation |
+| Flood Extent | — | — | Vector (GeoJSON) | 2022-08-29 | AOI selection and validation |
 
 Maxar data was accessed as Cloud Optimized GeoTIFFs (COGs) streamed from S3 via the Maxar Open Data STAC catalog. The 8-band WorldView-2 multispectral ordering is: Coastal (0), Blue (1), Green (2), Yellow (3), Red (4), Red Edge (5), NIR1 (6), NIR2 (7).
 
@@ -32,7 +32,7 @@ Tile selection was the most technically challenging part of the workflow. The Ma
 
 The selection pipeline addressed several challenges:
 
-- **Targeting confirmed new flooding:** All 1,766 ms_analytic tiles were scored against the UNOSAT flood extent GeoJSON (7,397 polygons, EPSG:3857 → WGS84). Permanent water bodies (Manchar Lake) were excluded so only monsoon-induced inundation was targeted.
+- **Targeting confirmed new flooding:** All 1,766 ms_analytic tiles were scored against the flood extent GeoJSON (7,397 polygons, EPSG:3857 → WGS84). Permanent water bodies (Manchar Lake) were excluded so only monsoon-induced inundation was targeted.
 - **Eliminating edge-of-swath strips:** Maxar ARD tiles sit on a fixed 5 km grid. Satellite swath edges produce narrow slivers with >70% nodata. Tiles with bounding box dimensions below 70% of the maximum were rejected.
 - **Ensuring spatial contiguity:** A greedy adjacency clustering algorithm selected the tightest cluster of 6 tiles to avoid black gaps in the mosaic.
 - **Resolving band count mismatches:** WV02/WV03 tiles (8-band) were kept separate from GE01 tiles (4-band) to prevent `rasterio.merge()` failures.
