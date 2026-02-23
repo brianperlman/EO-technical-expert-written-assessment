@@ -1,12 +1,10 @@
 # Building Extraction Feature Class Schema
 
----
-
 ## 1. Assignment Overview
 
-Médecins Sans Frontières (MSF) increasingly relies on Earth Observation (EO) data and geospatial analysis to support operational planning, population estimation, camp management, and disaster response. A critical component of this work is **building extraction** — the delineation of building footprints from satellite or aerial imagery using manual digitization, semi-automated, or fully automated (e.g., deep learning) methods.
+MSF relies on EO data and geospatial analysis to support operational planning, population estimation, camp management, and disaster response. A critical component of this work is **building extraction** — the delineation of building footprints from satellite or aerial imagery using manual digitization, semi-automated, or fully automated (e.g., deep learning) methods.
 
-This document defines a **standardized feature class schema** for building extraction results intended for **organization-wide adoption** across all MSF Operational Centres (OCs). The goal is to ensure that every building footprint dataset produced or commissioned by MSF — regardless of the extraction method, imagery source, geographic context, or project — conforms to a single, interoperable schema. This enables:
+This document defines a **standardized feature class schema** for building extraction results intended for **organization-wide adoption** across all MSF OCs. The goal is to ensure that every building footprint dataset produced or commissioned by MSF — regardless of the extraction method, imagery source, geographic context, or project — conforms to a single, interoperable schema. This enables:
 
 - Consistent data sharing across missions, OCs, and partner organizations (e.g., HOT, MapAction, UNOSAT).
 - Reliable downstream analysis such as population estimation, damage assessment, and change detection.
