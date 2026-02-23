@@ -3,8 +3,6 @@
 
 # Data Architecture — Storage & Image Server Strategy
 
----
-
 ## a. Storage Constraint Scenario
 
 **Scenario:** A processing script raises a low-disk-space warning on the **E: eo_storage** drive (2 TB network drive, daily incremental backups).
