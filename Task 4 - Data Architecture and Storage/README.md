@@ -13,6 +13,8 @@
 
 **Longer-term recommendations:** Implement automated housekeeping — a scheduled task that enforces a retention policy on E:, flagging or archiving files that haven't been modified in *n* days and purging temp directories on a weekly cycle. Establish a formal **tiered storage lifecycle**: raw imagery lands on E: for active processing, completed outputs are promoted to I: (COG archive) and then to S3, and E: is regularly swept. If 2 TB proves structurally insufficient given growing imagery volumes, make the case to expand E: or provision a dedicated scratch volume sized to the largest expected processing job (e.g., a national mosaic). Finally, add disk-usage monitoring with alerting thresholds (e.g., 75% and 90%) so warnings arrive well before a script fails mid-run.
 
+**Summary:** The E: drive is a 2 TB working volume that isn't meant for long-term storage. When it fills up: stop the script, purge temp files, promote finished outputs to I: or S3, and get back to work. Long-term, automate that cleanup cycle and add disk-usage alerts so we are never surprised again.
+
 ---
 
 ## b. Image Server Strategy
@@ -26,6 +28,8 @@
 **Medium-term (3–9 months):** Expand coverage to the full processed raster archive by building mosaic datasets that reference S3-hosted COGs in **eo-archive** and **eo-enterprise** (published CRFs), reducing dependency on the on-premises I: drive for serving. Introduce server-side raster analytics — NDVI, change detection, on-the-fly clipping — so that field teams can consume analysis-ready products directly from Portal without downloading raw imagery. Develop standardized processing templates and configure role-based access: internal analysts via **eo-enterprise**, external partners and contractors via **eo-exchange** with scoped read/write permissions. Use the **User Acceptance Testing (UAT)** environment (S3 mirror + UAT PostgreSQL) as a staging ground to test new mosaic definitions and processing templates before promoting to PROD.
 
 **Long-term (9–18 months):** Migrate the primary serving architecture to be **cloud-native and S3-backed**, with image services reading directly from COGs in S3 rather than routing through the on-premises network drives. This positions the system for elastic scaling during surge operations (e.g., a major natural disaster requiring rapid imagery dissemination to multiple OCs simultaneously). Integrate a **SpatioTemporal Asset Catalog (STAC)** API layer in front of the S3 archive so that imagery discovery, filtering by date/location/resolution, and service consumption follow open standards — reducing lock-in and enabling interoperability with partners like HOT, MapAction, and UNOSAT. Decommission or repurpose the on-premises I: drive as a local cache/staging tier rather than the primary archive, and consolidate documentation and access workflows on the existing **SharePoint pages** so that the full image service catalog is discoverable organization-wide.
+
+**Summary:** The building blocks are already in place (federated Image Server, PostgreSQL mosaic datasets, COGs on I:, S3 buckets). Short-term, publish image services from what you already have. Medium-term, shift serving to S3-backed mosaics and add raster analytics. Long-term, go fully cloud-native with a STAC catalog so imagery is discoverable and scalable across all OCs and partners.
 
 ---
 
