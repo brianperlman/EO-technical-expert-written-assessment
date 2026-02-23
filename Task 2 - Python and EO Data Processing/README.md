@@ -102,6 +102,11 @@ The SAR method classified **41.6%** of the scene as flooded — higher than the 
 
 *Left:* NDWI threshold (23.1% flooded). *Center:* GMM 8-band clustering (21.5% flooded). *Right:* Sentinel-1 SAR backscatter (41.6% flooded). All three methods identify the same major flood features — inundated agricultural fields in the north, the river corridor in the southwest, and drainage channel flooding — but differ in sensitivity at the margins.
 
+Note that the MSF finalized flood extent map comports well with my findings, especially when taking into consideration the more sensitive S1 approach.
+
+<img width="1916" height="927" alt="image" src="https://github.com/user-attachments/assets/f5dd7f36-50bf-439a-8716-424df758ce0d" />
+
+
 ### Quantitative Results
 
 | Method | Input | Flooded (%) | Flood Pixels |
@@ -164,7 +169,7 @@ To re-run the notebook:
 
 1. Place `floodextentpak.geojson` in the same directory as the notebook
 2. Provide AWS credentials in `ext_recruitment_user_4_creds.txt`
-3. Authenticate to Earth Engine: `earthengine authenticate --project=delos-sig-data`
+3. Authenticate to Earth Engine: `earthengine authenticate`
 4. Run all cells sequentially (Cells 0–35)
 
 The tile selection is deterministic given the same STAC catalog state. GEE results may vary slightly if Sentinel-1 reprocessing campaigns update the GRD archive.
