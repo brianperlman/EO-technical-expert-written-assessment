@@ -44,7 +44,7 @@ The final mosaic comprises 6 adjacent WV02 tiles from two satellite passes (cata
 
 Pre-flood imagery for the same 6 grid cells was identified from 2022-04-28 (WV03, 8-band). The comparison confirms the detected inundation is new — the landscape was dry agricultural land prior to the monsoon.
 
-![Before/After comparison and false color infrared](before-after-RGB-falsecolorIR.png)
+![Before/After comparison and false color infrared](figures/before-after-RGB-falsecolorIR.png)
 
 *Left:* Pre-flood true color (2022-04-28) showing dry agricultural fields and settlements. *Center:* Post-flood true color (2022-09-03) showing widespread dark water bodies and saturated terrain. *Right:* Post-flood false color composite (NIR1/Red/Green) where healthy vegetation appears bright red and standing water appears dark blue-black, making flood boundaries clearly visible.
 
@@ -64,13 +64,13 @@ NDWI = (Green [band 2] - NIR1 [band 6]) / (Green [band 2] + NIR1 [band 6])
 
 A threshold of NDWI ≥ 0.0 classifies pixels as water. The histogram below shows a clear bimodal distribution with the land peak around NDWI = −0.2 and the water peak around NDWI = +0.7, confirming the threshold is well-positioned in the valley between the two modes.
 
-![NDWI continuous values and histogram](ndwi-and-hist.png)
+![NDWI continuous values and histogram](figures/ndwi-and-hist.png)
 
 *Left:* NDWI continuous values (blue = water, red = dry land). *Right:* Histogram of NDWI values with the 0.0 threshold shown in red, positioned in the valley between the land and water peaks.
 
 The resulting classification map:
 
-![Flood classification using NDWI](flood-classification-ndwi.png)
+![Flood classification using NDWI](figures/flood-classification-ndwi.png)
 
 *Left:* Post-flood true color satellite mosaic. *Right:* NDWI flood classification — 23.1% of the scene classified as flooded (blue), concentrated along drainage channels, low-lying agricultural fields, and the river corridor in the southwest.
 
@@ -97,7 +97,7 @@ The SAR method classified **41.6%** of the scene as flooded — higher than the 
 
 ## 6. Multi-Method Comparison
 
-![Three-way flood detection comparison](ndwi-GMMclustering-S1.png)
+![Three-way flood detection comparison](figures/ndwi-GMMclustering-S1.png)
 
 *Left:* NDWI threshold (23.1% flooded). *Center:* GMM 8-band clustering (21.5% flooded). *Right:* Sentinel-1 SAR backscatter (41.6% flooded). All three methods identify the same major flood features — inundated agricultural fields in the north, the river corridor in the southwest, and drainage channel flooding — but differ in sensitivity at the margins.
 
