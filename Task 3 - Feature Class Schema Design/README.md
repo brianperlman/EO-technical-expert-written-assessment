@@ -256,7 +256,3 @@ These derived products are critical for MSF operational reporting and should be 
 ---
 
 **Transparency note:** Claude Opus 4.6 assisted me with the schema, but I am responsible for all content.
-
----
-
-*This schema is intended as a living document. Proposed amendments should be submitted through the MSF GIS Technical Working Group for review and consensus before adoption.*
