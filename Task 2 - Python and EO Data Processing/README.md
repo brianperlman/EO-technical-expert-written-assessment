@@ -1,7 +1,6 @@
 # Pakistan 2022 Monsoon Flood Detection — Methodology and Results
 
 **Author:** Brian Perlman | **Date:** September 2022 analysis, documented 22 February 2026
-**Notebook:** `Test_TL_Perlman_Pakistan_08August2022_FloodDetection.ipynb`
 
 ---
 
