@@ -1,7 +1,5 @@
 # Building Extraction Feature Class Schema
 
-## MSF GIS & Earth Observation Unit — Standard Reference Document
-
 ---
 
 ## 1. Assignment Overview
