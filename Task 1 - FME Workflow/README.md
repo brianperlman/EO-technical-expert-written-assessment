@@ -1,6 +1,6 @@
 # Task 1 - FME Tile Map Service (TMS) Generation
 
-Here, I describe how to fill in each parameter in the FME Workbench **Reader/Writer Variables** panel for generating Tile Map Services from satellite imagery. I also provide an overview of the two main workflow blocks: **Raster Prep** and **Tiling & Output (AOI Prep)**.
+Here, I describe how to fill in each parameter in the FME Workbench Reader/Writer Variables panel for generating Tile Map Services from satellite imagery. I also provide an overview of the two main workflow blocks: Raster Prep and Tiling & Output (AOI Prep).
 
 ---
 
