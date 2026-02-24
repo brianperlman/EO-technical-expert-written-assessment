@@ -208,7 +208,7 @@ The prepared raster is intersected with the AOI and sliced into a pyramid of 256
 
 ### 3.4 Output via StringConcatenator and Fanout
 
-The StringConcatenator builds the output file path for each tile, and the writer uses a **Fanout Expression** to save individual PNG tiles into the standard TMS directory structure (`z/x/y.png`) under the destination directory (Section 1.7).
+The StringConcatenator builds the output file path for each tile, and the writer uses a Fanout Expression to save individual PNG tiles into the standard TMS directory structure (`z/x/y.png`) under the destination directory (Section 1.7).
 
 ---
 
