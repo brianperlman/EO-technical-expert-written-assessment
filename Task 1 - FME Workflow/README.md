@@ -68,7 +68,7 @@ Here, I describe how to fill in each parameter in the FME Workbench Reader/Write
 
 ### 1.7 Destination TMS Directory*
 
-**What to enter:** The output folder path where the tile pyramid will be written (e.g., `C:\TMS_Output\project_alpha`).
+**What to enter:** The output folder path where the tile pyramid will be written (e.g., `C:\TMS_Output\project_abc`).
 
 **Assumptions and notes:**
 
