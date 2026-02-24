@@ -167,7 +167,7 @@ The source GeoTIFF (from Section 1.1) is read into the workflow.
 
 ### 2.2 Convert to Web Mercator
 
-The raster is reprojected from its native coordinate system to **EPSG:3857 (Web Mercator)**, which is the standard projection for web-based tile map services.
+The raster is reprojected from its native coordinate system to EPSG:3857 (Web Mercator), which is the standard projection for web-based tile map services.
 
 ### 2.3 Band Sorting / RGB Check (Tester_3)
 
