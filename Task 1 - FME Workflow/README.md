@@ -218,7 +218,7 @@ The StringConcatenator builds the output file path for each tile, and the writer
 |---|---|---|
 | Source GeoTIFF | `C:\Data\scene.tif` | Must be georeferenced |
 | Is raster already RGB? | ☐ Unchecked | Bands need reordering |
-| AOI Filter Type | `Name` or `OID` | Choose based on your identification method |
+| AOI Filter Type | `Name` or `OID` | Choose based on identification method |
 | AOI Name / Version / OID | *(depends on filter type)* | Fill only the relevant fields |
 | Destination TMS Directory | `C:\TMS_Output\tiles` | Ensure adequate disk space |
 | TMS Min Zoom | `10` | Standard default |
